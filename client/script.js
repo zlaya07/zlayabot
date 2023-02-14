@@ -67,7 +67,7 @@ const handlesubmit = async e => {
 
   // Fetch data from server -> bot's response
 
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://zlayabot.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
