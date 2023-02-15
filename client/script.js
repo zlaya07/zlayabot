@@ -93,8 +93,14 @@ const handlesubmit = async e => {
 };
 
 form.addEventListener('submit', handlesubmit);
-form.addEventListener('keyup', e => {
-  if (e.key === 'Enter') {
-    handlesubmit(e);
-  }
-});
+if (
+  !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  form.addEventListener('keyup', e => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      handlesubmit(e);
+    }
+  });
+}
