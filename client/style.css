@@ -108,7 +108,7 @@ body {
 }
 
 /* hides scrollbar */
-.message::-webkit-scrollbar {
+.message::-webkit-scrollbar, textarea::-webkit-scrollbar {
   display: none;
 }
 
